@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Medica Me</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/5632e46ad7.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script>
+		function welcome() {
+			var nome = localStorage.getItem('nome');
+			$("#userName").text(nome);
+		}
+
+		const readApi = () => {
+			var dados = {
+				id: '1'
+			};
+
+			var url = 'http://127.0.0.1:8000/api/remedios?id=' + dados.id;
+
+			$.ajax({
+				url: url,
+				type: 'GET',
+				contentType: 'application/json',
+				success: function (data) {
+					addEstrutura(data)
+
+					$('#content').empty();
+
+					// Itera sobre os objetos no array de dados
+					// data.forEach(function (remedio) {
+					// 	// Cria um novo elemento div para cada remédio
+					// 	var remedioDiv = $('<div class="remedio"></div>');
+
+					// 	// Adiciona os dados do remédio ao elemento div
+					// 	remedioDiv.append('<p><strong>ID:</strong> ' + remedio.id + '</p>');
+					// 	remedioDiv.append('<p><strong>Nome:</strong> ' + remedio.nome + '</p>');
+					// 	remedioDiv.append('<p><strong>Horário:</strong> ' + remedio.horario + '</p>');
+					// 	remedioDiv.append('<p><strong>Dia:</strong> ' + remedio.dia + '</p>');
+					// 	remedioDiv.append('<p><strong>Descrição:</strong> ' + remedio.descricao + '</p>');
+					// 	remedioDiv.append('<p><strong>Key:</strong> ' + remedio.key + '</p>');
+
+					// 	// Adiciona o elemento div ao conteúdo da página
+					// 	$('#content').append(remedioDiv);
+					// });
+				},
+				error: function (xhr, status, error) {
+					alert("Erro ao salvar o remédio, contate o admnistrador do sistema");
+				}
+			});
+		}
+
+		const addEstrutura = (data) => {
+			data.map((item, index) => {
+				console.log(item)
+				var nomeRemedio = item.nome;
+				var descricao = item.descricao;
+				var horario = item.horario;
+				var diasSelecionados = item.dia;
+				var timeStamp = item.key;
+	
+				if (nomeRemedio != null) {
+					var newContent = $('<div>').addClass('container').append(
+						$('<div>').addClass('horario').append(
+							$('<h3>').attr('id', 'horario').text(horario),
+							$('<h3>').attr('id', 'diaSemana').text(diasSelecionados)
+						),
+						$('<div>').addClass('descRemedio').append(
+							$('<h3>').attr('id', 'nomeRemedio').text(nomeRemedio),
+							$('<h3>').attr('id', 'descricao').text(descricao),
+							$('<input>').attr('type', 'hidden').attr('id', 'timeStamp').val(timeStamp),
+							$('<button>').attr('type', 'submit').addClass('btn btn-lg btn-finalizar').text('Finalizar')
+						)
+					);
+	
+					$('#content').append(newContent);
+	
+				}
+			})
+		}
+
+		$(document).ready(() => {
+			welcome()
+			readApi()
+		})
+	</script>
+</head>
+
+<body>
+	<div class="pages-header">
+		<a class="back-icon" href="home.html"><i class="fa-solid fa-arrow-left"></i></a>
+		<h2>Remédios</h2>
+	</div>
+
+	<div class="container-fluid">
+		<h3 id="userName" name="userName" class="h3inline"></h3>
+		<h3 class="h3inline">, Seus Remédios!</h3>
+		<a href="addRemedios.html"><button type="submit" class="btn btn-lg btn-block btn-addRemedio">Adicionar
+				remédio</button></a>
+		<div id="content"></div>
+	</div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="addEstrutura.js"></script>
+</body>

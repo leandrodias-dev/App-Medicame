@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Medica Me</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/5632e46ad7.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
+    </head>
+
+	<body>
+		<div class="pages-header">
+			<a class="back-icon" href="remedios.html"><i class="fa-solid fa-arrow-left"></i></a>
+			<h2>Remédios</h2>
+		</div>
+
+		<div class="container-remedios"> 
+            <form>
+                
+                <label for="nomeRemedio">Nome do remédio</label>
+                <div>
+                    <input type="text" id="nomeRemedio" name="nomeRemedio">
+
+                </div>
+                
+                <label for="horarioRemedio">Horário do remédio</label>
+                <div>
+                    <input type="text" id="horarioRemedio" name="horarioRemedio" placeholder="00:00">
+
+                </div>
+            
+               
+                <label>Dia da semana</label>
+                <div>
+                    <input type="checkbox" id="segunda" name="diaSemana" value="Segunda-feira">
+                    <label for="segunda">Segunda-feira</label><br>
+                
+                    <input type="checkbox" id="terca" name="diaSemana" value="Terça-feira">
+                    <label for="terca">Terça-feira</label><br>
+                
+                    <input type="checkbox" id="quarta" name="diaSemana" value="Quarta-feira">
+                    <label for="quarta">Quarta-feira</label><br>
+                
+                    <input type="checkbox" id="quinta" name="diaSemana" value="Quinta-feira">
+                    <label for="quinta">Quinta-feira</label><br>
+                
+                    <input type="checkbox" id="sexta" name="diaSemana" value="Sexta-feira">
+                    <label for="sexta">Sexta-feira</label><br>
+                
+                    <input type="checkbox" id="sabado" name="diaSemana" value="Sábado">
+                    <label for="sabado">Sábado</label><br>
+                
+                    <input type="checkbox" id="domingo" name="diaSemana" value="Domingo">
+                    <label for="domingo">Domingo</label><br>
+                </div>
+
+                <label for="descricao">Descrição</label>
+                <div >
+                    <textarea id="descricao" name="descricao" rows="3" cols="32"></textarea>
+                </div>               
+                
+                <div class="row col-md-3">
+                    <button type="button" class="btn btn-lg btn-block btn-addRemedio" onclick="addRemedio()">Adicionar remédio</button>
+                    <input type="hidden" id="timeStamp" name="timeStamp">
+                </div>
+
+
+            </form>
+        </div>
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+        <script type="text/javascript" src="addRemedio.js"></script>
+    </body>

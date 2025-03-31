@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a { 
+    color: #39A96B; 
+}
+
+label {
+    color: #000000;
+}
+
+h1 {
+    color: #FFF;
+    margin-left: -60px;
+    font-weight: bold;
+}
+
+
+.container-fluid {
+    padding-bottom: 50%;
+}
+.header{
+    margin: 60px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.pages-header {
+    background-color: #39A96B;
+    color: #FFF;
+    border-bottom-right-radius: 100px 100px;
+    margin-bottom: 30px;
+    padding: 25px;
+    
+}
+
+/** LOGIN  */
+.btn-login {
+    background-color: #39A96B;
+    color: #FFF;
+}
+
+.form-control:focus {
+    border-color: #39A96B;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+} 
+
+.new-account {
+    padding: 40px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.background {
+    background-image: url(images/background.png);
+    background-color: rgb(151, 150, 150);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.btn-signup {
+    background-color: transparent;
+    border-color: #ffffff00;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 20px;
+    align-items: center;      
+}
+.signup{
+    text-align: center;
+}
+
+.conectAuto {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.colorWorld {
+    color: #FFF;
+}
+
+@media (width <= 600px) {
+    .form-group {
+        padding-bottom: 0;
+        width: 100%;
+        text-align: left;
+        flex-wrap: wrap;
+    }
+
+    .singup {
+        margin-inline: auto;
+}
+}
+/** HOME */
+.cards { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.each-card {
+    margin-top: 20px;
+    margin-bottom: 5px;
+        
+    border: 1px #D8D8E8 solid;
+    border-radius: 10px;
+
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+    margin-top: 10px;
+}
+.a-card:focus {
+    color: #39A96B;
+}
+
+.welcome {
+    color: #39A96B;
+    margin-left: 20%;
+    margin-bottom: 30px;
+    font-size: x-large;
+    text-align: center;
+}
+/** REMEDIOS */
+
+.back-icon {
+    color: #FFF;
+}
+.back-icon:focus {
+    color: #FFF;
+}
+.h3inline{
+    display: inline-block;
+    text-align: center;
+    color: #39A96B;
+    margin-bottom: 40px;
+}
+.container-remedios{
+    text-align: left;
+    margin-left: 10%;
+}
+.container{
+    width: 95%;
+    height: 120px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    border: 2px;
+    border-color: #222627;
+    border-style: solid;
+    margin-top: 20%;
+}
+.horario{
+    float: left;
+    text-align: left;
+}
+.descRemedio{
+    float: right;
+}
+#nomeRemedio, #diaSemana, #descricao{
+    font-size: medium;
+}
+.btn-finalizar{
+    float: right;
+    background-color: rgb(229, 84, 111);
+}
+.btn-addRemedio{
+    text-align: center;
+    background-color: #38c577;
+}

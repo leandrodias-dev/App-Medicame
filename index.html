@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<title>Medica Me</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/5632e46ad7.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	</head>
+
+	<body class="background">
+		<div class="container-fluid"> 
+
+			<div class="header">
+				<h1>Login</h1>
+			</div>
+			<div class = "signup">
+				<button class="btn-signup">
+					<a target="_blank" href="https://www.facebook.com/"><svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.5" y="0.5" width="159" height="55" rx="4.5" stroke="#D8D8E8"/>
+						<path d="M81.7399 38V28.8919H84.8127L85.2694 25.3258H81.7399V23.0543C81.7399 22.0253 82.0267 21.3207 83.5036 21.3207H85.375V18.1413C84.4644 18.0437 83.5492 17.9966 82.6334 18.0002C79.9174 18.0002 78.0527 19.6582 78.0527 22.702V25.3191H75V28.8852H78.0594V38H81.7399Z" fill="#0047FF"/>
+						</svg></a>
+				</button>
+				<button class="btn-signup">
+					<a target="_blank" href="https://www.google.com/intl/pt-BR/account/about/"><svg width="159" height="56" viewBox="0 0 159 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.5" y="0.5" width="158" height="55" rx="4.5" stroke="#D8D8E8"/>
+						<path d="M89.7957 25.4435H88.9499V25.4H79.4999V29.5999H85.434C84.5683 32.0449 82.242 33.7999 79.4999 33.7999C76.0208 33.7999 73.2 30.9791 73.2 27.4999C73.2 24.0208 76.0208 21.2 79.4999 21.2C81.1059 21.2 82.567 21.8058 83.6795 22.7954L86.6494 19.8255C84.7741 18.0778 82.2656 17 79.4999 17C73.7014 17 69 21.7014 69 27.4999C69 33.2985 73.7014 37.9999 79.4999 37.9999C85.2985 37.9999 89.9999 33.2985 89.9999 27.4999C89.9999 26.7959 89.9274 26.1087 89.7957 25.4435Z" fill="#FFC107"/>
+						<path d="M70.2107 22.6127L73.6604 25.1427C74.5939 22.8317 76.8545 21.2 79.5 21.2C81.1059 21.2 82.567 21.8058 83.6795 22.7954L86.6494 19.8255C84.7741 18.0778 82.2657 17 79.5 17C75.4669 17 71.9694 19.2769 70.2107 22.6127Z" fill="#FF3D00"/>
+						<path d="M79.5 38C82.2121 38 84.6765 36.9621 86.5397 35.2742L83.2899 32.5243C82.2003 33.3529 80.8689 33.8011 79.5 33.8C76.7689 33.8 74.45 32.0586 73.5764 29.6284L70.1524 32.2665C71.8901 35.6669 75.4192 38 79.5 38Z" fill="#4CAF50"/>
+						<path d="M89.7957 25.4436H88.9499V25.4001H79.4999V29.6H85.434C85.0199 30.7636 84.2739 31.7804 83.2883 32.5248L83.2899 32.5237L86.5396 35.2737C86.3097 35.4826 89.9999 32.75 89.9999 27.5C89.9999 26.796 89.9274 26.1088 89.7957 25.4436Z" fill="#1976D2"/>
+						</svg></a>
+				</button>
+			</div>
+			<p class="conectAuto">ou acesse com e-mail/celular</p>
+
+			<form>
+				<div class="form-group">
+				  <label class="colorWorld" for="exampleInputEmail1">E-mail</label>
+				  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+				  <input type="hidden" id="inputNome">
+				  <!-- <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small> -->
+				</div>
+				<div class="form-group">
+				  <label class="colorWorld" for="exampleInputPassword1">Senha</label>
+				  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+				</div>
+				<div class="form-group">
+					
+					<label class="form-check-label" for="exampleCheck1">
+					<a href="url">Esqueci minha senha</a>
+
+					</label>
+				  </div>
+	
+				<button type="submit" class="btn btn-lg btn-block btn-login" onclick="fazerLogin(event)">Acessar</button>
+			  </form>
+
+			  <div class="new-account">
+				<p> Ainda não possui uma conta? <br> <a href="url" class="conectAuto">Cadastre-se gratuitamente</a></p>
+				
+			  </div>
+		</div>
+		
+		<script type="text/javascript" src="login.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	  
+    </body>
